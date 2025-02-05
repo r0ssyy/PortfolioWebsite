@@ -293,7 +293,7 @@ $(document).ready(function () {
 
     $('#youtube').magnificPopup({
         items: {
-            src: 'https://www.youtube.com/watch?v=OZzoAw9QHXY'
+            src: 'https://www.youtube.com/embed/tfnYNxdDnAs'
         },
         type: 'iframe'
     });
