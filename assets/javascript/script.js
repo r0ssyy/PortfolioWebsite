@@ -286,14 +286,14 @@ hiddenElements.forEach((el) => observer.observe(el));
 $(document).ready(function () {
     $('#vimeo').magnificPopup({
         items: {
-            src: 'https://vimeo.com/259411563'
+            src:'./assets/portfolio/km_Final Maifsi_720p.mp4'
         },
         type: 'iframe'
     });
 
     $('#youtube').magnificPopup({
         items: {
-            src: 'https://www.youtube.com/embed/tfnYNxdDnAs'
+            src: './assets/portfolio/BGK_NY.mp4'
         },
         type: 'iframe'
     });
@@ -301,7 +301,7 @@ $(document).ready(function () {
     $('.link').magnificPopup({
         type: 'soundcloud',
         items: {
-            src: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/163522130&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
+            src: './assets/portfolio/BGK_MENU.mp4'
         },
         type: 'iframe',
     });
