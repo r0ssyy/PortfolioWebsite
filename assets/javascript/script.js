@@ -286,7 +286,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 $(document).ready(function () {
     $('#vimeo').magnificPopup({
         items: {
-            src:'./assets/portfolio/km_Final Maifsi_720p.mp4'
+            src:'https://www.youtube.com/embed/tfnYNxdDnAs?si=Zbs0t09lwTfPG2xL' 
         },
         type: 'iframe'
     });
