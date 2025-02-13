@@ -2677,3 +2677,21 @@ ul {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
+.video-thumbnail {
+    position: relative;
+    display: inline-block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    display: none;
+}
+
+.video-thumbnail:hover .play-button {
+    display: block;
+}

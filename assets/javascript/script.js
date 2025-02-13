@@ -284,29 +284,20 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 // pop video
 $(document).ready(function () {
-    $('#vimeo').magnificPopup({
+    // Pop-up for first video
+    $('.popup-video').magnificPopup({
         items: {
-            src:'https://www.youtube.com/embed/tfnYNxdDnAs?si=Zbs0t09lwTfPG2xL' 
+            src: 'https://www.youtube.com/embed/tfnYNxdDnAs?si=Zbs0t09lwTfPG2xL'
         },
         type: 'iframe'
     });
 
-    $('#youtube').magnificPopup({
-        items: {
-            src: './assets/portfolio/BGK_NY.mp4'
-        },
-        type: 'iframe'
-    });
-
+    // Pop-up for other YouTube links
     $('.link').magnificPopup({
-        type: 'soundcloud',
-        items: {
-            src: './assets/portfolio/BGK_MENU.mp4'
-        },
-        type: 'iframe',
+        type: 'iframe'
     });
-
 });
+
 
 // gallary code
 window.addEventListener("load", () => {
