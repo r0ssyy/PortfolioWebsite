@@ -13,6 +13,8 @@ document.getElementsByClassName("olivia_moswa")[0];
 firstText = "Designer";
 secondText = "Developer";
 thridText = "Freelancer"
+fourthText = "Data Entry";
+fifthText = "Virtual Assistant";
 intervalTime = 600;
 window.load = displayText();
 function displayText() {
@@ -23,7 +25,13 @@ function displayText() {
     }, intervalTime * 3);
     setTimeout(() => {
         document.querySelector('.designer').innerText = thridText;
-    }, intervalTime * 5);
+    }, intervalTime * 6);
+    setTimeout(() => {
+        document.querySelector('.designer').innerText = fourthText;
+    }, intervalTime * 9);
+    setTimeout(() => {
+        document.querySelector('.designer').innerText = fifthText;
+    }, intervalTime * 12);
 }
 setInterval(() => {
     displayText();
