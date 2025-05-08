@@ -1380,11 +1380,16 @@ button:hover .shopping_bag {
     line-height: 30px;
 }
 
+.lan_skill_circle_main,
 .skill_circle_main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding-top: 30px;
     gap: 30px;
+}
+
+.lan_skill_circle_main {
+    gap: 100px;
 }
 
 .circle-chart {
@@ -1483,7 +1488,7 @@ button:hover .shopping_bag {
 }
 
 .hard_skill_group:hover .figma {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(26%) saturate(5679%) hue-rotate(66deg) brightness(122%) contrast(79%);
+    filter: brightness(0) saturate(100%) invert(71%) sepia(18%) saturate(3622%) hue-rotate(305deg) brightness(86%) contrast(112%);
 }
 
 /*-----------------------[ 14.Portfolio Section CSS ]------------------------*/
