@@ -75,6 +75,7 @@ a {
     --uiux-text-hover: #FFC3AB;
     --bag: brightness(0) saturate(100%) invert(2%) sepia(4%) saturate(7498%) hue-rotate(139deg) brightness(101%) contrast(99%);
     --background-hover-card: rgba(0, 0, 0, 0.7);
+    --cursor-grow-background-color: none;
 }
 
 .dark-mode {
@@ -97,6 +98,7 @@ a {
     --uiux-text-hover: #FFF;
     --bag: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(286deg) brightness(101%) contrast(101%);
     --background-hover-card: rgba(172, 171, 171, 0.603);
+    --cursor-grow-background-color: none;
 }
 
 body {
@@ -646,7 +648,7 @@ canvas {
 .grow,
 .grow-small {
     transform: scale(2);
-    background: #FFDFAB;
+    background: var(--cursor-grow-background-color);
     mix-blend-mode: difference;
     border: none;
 }
