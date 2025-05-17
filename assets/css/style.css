@@ -1500,16 +1500,16 @@ button:hover .shopping_bag {
 .content_main1 {
     display: grid;
     justify-items: start;
-    width: 330px;
+    width: 200px;
     height: 420px;
-    gap: 30px;
+    gap: 20px;
 }
 
 .content_main2 {
     display: grid;
     gap: 30px;
-    justify-items: start;
-    width: 330px;
+    justify-items: flex-end;
+    width: 200px;
 }
 
 .content_portfolio {
@@ -1518,6 +1518,8 @@ button:hover .shopping_bag {
     max-width: 100%;
     margin: auto;
 }
+
+
 
 .content_portfolio .content-overlay {
     background: rgba(0, 0, 0, 0.7);
