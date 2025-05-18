@@ -1593,6 +1593,7 @@ button:hover .shopping_bag {
     line-height: 26px;
     padding: 10px 0;
     margin: 0;
+    text-align: center;
 }
 
 .project_name_sub {
