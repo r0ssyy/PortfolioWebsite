@@ -1,8 +1,8 @@
 // Preloader
 $(document).ready(function () {
-    setTimeout(function () {
-        $('.wrapper').addClass('loaded');
-    }, 2500);
+  setTimeout(function () {
+    $(".wrapper").addClass("loaded");
+  }, 2500);
 });
 
 // olivia moswa text
@@ -12,72 +12,72 @@ document.getElementsByClassName("olivia_moswa")[0];
 // designer text
 firstText = "Designer";
 secondText = "Developer";
-thridText = "Freelancer"
+thridText = "Freelancer";
 fourthText = "Data Entry";
 fifthText = "Virtual Assistant";
 intervalTime = 600;
 window.load = displayText();
 function displayText() {
-    document.querySelector('.designer').innerText = firstText;
-    firstText.innerText
-    setTimeout(() => {
-        document.querySelector('.designer').innerText = secondText;
-    }, intervalTime * 3);
-    setTimeout(() => {
-        document.querySelector('.designer').innerText = thridText;
-    }, intervalTime * 6);
-    setTimeout(() => {
-        document.querySelector('.designer').innerText = fourthText;
-    }, intervalTime * 9);
-    setTimeout(() => {
-        document.querySelector('.designer').innerText = fifthText;
-    }, intervalTime * 12);
+  document.querySelector(".designer").innerText = firstText;
+  firstText.innerText;
+  setTimeout(() => {
+    document.querySelector(".designer").innerText = secondText;
+  }, intervalTime * 3);
+  setTimeout(() => {
+    document.querySelector(".designer").innerText = thridText;
+  }, intervalTime * 6);
+  setTimeout(() => {
+    document.querySelector(".designer").innerText = fourthText;
+  }, intervalTime * 9);
+  setTimeout(() => {
+    document.querySelector(".designer").innerText = fifthText;
+  }, intervalTime * 12);
 }
 setInterval(() => {
-    displayText();
+  displayText();
 }, intervalTime * 7);
 // designer text end
 
-// card Tabs 
-var tabs = document.getElementById('icetab-container').children;
-var tabs2 = document.getElementById('icetab-container2').children;
-var tabcontents = document.getElementById('icetab-content').children;
- 
-var mybtn = function () {
-    var tabchange = this.mynum;
-    for (var int = 0; int < tabcontents.length; int++) {
-        tabcontents[int].className = 'tabcontent';
+// card Tabs
+var tabs = document.getElementById("icetab-container").children;
+var tabs2 = document.getElementById("icetab-container2").children;
+var tabcontents = document.getElementById("icetab-content").children;
 
-        if (tabs[int].className = 'icetab') {
-            tabs[int].className = 'icetab';
-            this.classList.add('current-tab');
-            tabcontents[int].className = 'tabcontent'
-            tabcontents[tabchange].classList.add('tab-active');
-        }
+var mybtn = function () {
+  var tabchange = this.mynum;
+  for (var int = 0; int < tabcontents.length; int++) {
+    tabcontents[int].className = "tabcontent";
+
+    if ((tabs[int].className = "icetab")) {
+      tabs[int].className = "icetab";
+      this.classList.add("current-tab");
+      tabcontents[int].className = "tabcontent";
+      tabcontents[tabchange].classList.add("tab-active");
     }
-}
+  }
+};
 
 var mybtn2 = function () {
-    var tabchange = this.mynum;
-    for (var int = 0; int < tabcontents.length; int++) {
-        tabcontents[int].className = 'tabcontent';
-        if (tabs2[int].className = 'icetab') {
-            tabs2[int].className = 'icetab';
-            this.classList.add('current-tab');
-            tabcontents[int].className = 'tabcontent'
-            tabcontents[tabchange].classList.add('tab-active');
-        }
+  var tabchange = this.mynum;
+  for (var int = 0; int < tabcontents.length; int++) {
+    tabcontents[int].className = "tabcontent";
+    if ((tabs2[int].className = "icetab")) {
+      tabs2[int].className = "icetab";
+      this.classList.add("current-tab");
+      tabcontents[int].className = "tabcontent";
+      tabcontents[tabchange].classList.add("tab-active");
     }
-}
+  }
+};
 
 for (var index = 0; index < tabs.length; index++) {
-    tabs[index].mynum = index;
-    tabs[index].addEventListener('click', mybtn, false);
+  tabs[index].mynum = index;
+  tabs[index].addEventListener("click", mybtn, false);
 }
 
 for (var index = 0; index < tabs2.length; index++) {
-    tabs2[index].mynum = index;
-    tabs2[index].addEventListener('click', mybtn2, false);
+  tabs2[index].mynum = index;
+  tabs2[index].addEventListener("click", mybtn2, false);
 }
 // card Tabs end
 
@@ -87,234 +87,249 @@ const homeNavabr = document.getElementById("home");
 const circular_imgClick = document.getElementsByClassName("circular_text_main");
 
 circular_imgClick[0].addEventListener("click", () => {
-    homeNavabr.classList.remove("tab-active");
-    elements.classList.add("tab-active");
+  homeNavabr.classList.remove("tab-active");
+  elements.classList.add("tab-active");
 });
 
 // Dark/ Light Mode Toggle
 function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+  var element = document.body;
+  element.classList.toggle("dark-mode");
 
-    var sunIcon = document.getElementById("sunIcon");
-    var moonIcon = document.getElementById("moonIcon");
+  var sunIcon = document.getElementById("sunIcon");
+  var moonIcon = document.getElementById("moonIcon");
 
-    if (element.classList.contains("dark-mode")) {
-        sunIcon.classList.add("hidden");
-        moonIcon.classList.remove("hidden");
-        localStorage.setItem("mode", "dark");
-    } else {
-        moonIcon.classList.add("hidden");
-        sunIcon.classList.remove("hidden");
-        localStorage.setItem("mode", "light");
-    }
+  if (element.classList.contains("dark-mode")) {
+    sunIcon.classList.add("hidden");
+    moonIcon.classList.remove("hidden");
+    localStorage.setItem("mode", "dark");
+  } else {
+    moonIcon.classList.add("hidden");
+    sunIcon.classList.remove("hidden");
+    localStorage.setItem("mode", "light");
+  }
 }
 document.addEventListener("DOMContentLoaded", function () {
-    const storedMode = localStorage.getItem("mode");
-    if (storedMode === "dark") {
-        document.body.classList.add("dark-mode");
-        var sunIcon = document.getElementById("sunIcon");
-        var moonIcon = document.getElementById("moonIcon");
-        sunIcon.classList.add("hidden");
-        moonIcon.classList.remove("hidden");
-    }
+  const storedMode = localStorage.getItem("mode");
+  if (storedMode === "dark") {
+    document.body.classList.add("dark-mode");
+    var sunIcon = document.getElementById("sunIcon");
+    var moonIcon = document.getElementById("moonIcon");
+    sunIcon.classList.add("hidden");
+    moonIcon.classList.remove("hidden");
+  }
 });
 // Dark/ Light Mode Toggle end
 
 // Portfolio Pop-up
 $(".pop-up").on("click", function () {
-    $(".overlay").addClass("is-on");
+  $(".overlay").addClass("is-on");
 });
 
 $("#close").on("click", function () {
-    $(".overlay").removeClass("is-on");
+  $(".overlay").removeClass("is-on");
 });
 // Portfolio Pop-up end
 
 // Share Btn
 $(document).ready(function () {
-    $(".share-btn").click(function (e) {
-        $('.networks-5').not($(this).next(".networks-5")).each(function () {
-            $(this).removeClass("active");
-        });
-        $(this).next(".networks-5").toggleClass("active");
-    });
+  $(".share-btn").click(function (e) {
+    $(".networks-5")
+      .not($(this).next(".networks-5"))
+      .each(function () {
+        $(this).removeClass("active");
+      });
+    $(this).next(".networks-5").toggleClass("active");
+  });
 });
 // Share Btn End
 
 // Testimonial Card Slider
 $(function () {
-    $('.testimonials_card').on('init', function (event, slick) {
-        $(this).append('<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>');
-        $('.current').text(slick.currentSlide + 1);
-        $('.total').text(slick.slideCount);
+  $(".testimonials_card")
+    .on("init", function (event, slick) {
+      $(this).append(
+        '<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>'
+      );
+      $(".current").text(slick.currentSlide + 1);
+      $(".total").text(slick.slideCount);
     })
-        .slick({
-            autoplay: true,
-            autoplaySpeed: 3000,
-            infinite: true,
-            arrows: true,
-            prevArrow: '<span class="prev-arrow"><i class="ri-arrow-left-s-line"></i></span>',
-            nextArrow: '<span class="next-arrow"><i class="ri-arrow-right-s-line"></i></span>',
-        })
-        .on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            $('.current').text(nextSlide + 1);
-        });
+    .slick({
+      autoplay: true,
+      autoplaySpeed: 3000,
+      infinite: true,
+      arrows: true,
+      prevArrow:
+        '<span class="prev-arrow"><i class="ri-arrow-left-s-line"></i></span>',
+      nextArrow:
+        '<span class="next-arrow"><i class="ri-arrow-right-s-line"></i></span>',
+    })
+    .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+      $(".current").text(nextSlide + 1);
+    });
 });
 // Testimonial Card Slider End
 
 // View More View Less btn
 $(document).ready(function () {
-    $("#toggle").click(function () {
-        var elem = $("#toggle").text();
-        if (elem == "View More") {
-            $("#toggle").text("View Less");
-            $("#text").slideDown();
-        } else {
-            $("#toggle").text("View More");
-            $("#text").slideUp();
-        }
-    });
+  $("#toggle").click(function () {
+    var elem = $("#toggle").text();
+    if (elem == "View More") {
+      $("#toggle").text("View Less");
+      $("#text").slideDown();
+    } else {
+      $("#toggle").text("View More");
+      $("#text").slideUp();
+    }
+  });
 });
 // View More View Less btn End
 
 // blog Page Pop Up
 $(document).ready(function () {
-    $('.trigger').click(function () {
-        $('.modal-wrapper').toggleClass('open');
-        $('.page-wrapper').toggleClass('blur');
-        return false;
-    });
+  $(".trigger").click(function () {
+    $(".modal-wrapper").toggleClass("open");
+    $(".page-wrapper").toggleClass("blur");
+    return false;
+  });
 });
 // blog Page Pop Up End
 
 // blog_pop_up_slider
 $(function () {
-    $('.blog_pop_up_slider').slick({
-        infinity: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: false,
-        arrows: false,
-        prevArrow: '<span class="prev-btn"><i class="fa-solid fa-arrow-left"></i> Prev </span>',
-        nextArrow: '<span class="next-btn"> Next <i class="fa-solid fa-arrow-right"></i> </span>',
-        responsive: [
-            {
-                breakpoint: 645,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    arrows: false,
-                }
-            }
-        ]
-    });
+  $(".blog_pop_up_slider").slick({
+    infinity: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrows: false,
+    prevArrow:
+      '<span class="prev-btn"><i class="fa-solid fa-arrow-left"></i> Prev </span>',
+    nextArrow:
+      '<span class="next-btn"> Next <i class="fa-solid fa-arrow-right"></i> </span>',
+    responsive: [
+      {
+        breakpoint: 645,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          arrows: false,
+        },
+      },
+    ],
+  });
 });
 // blog_pop_up_slider end
 
 // form
-$('input').focus(function () {
-    $(this).parent().addClass('active');
-    $('input').focusout(function () {
-        if ($(this).val() == '') {
-            $(this).parent().removeClass('active');
-        } else {
-            $(this).parent().addClass('active');
-        }
-    })
+$("input").focus(function () {
+  $(this).parent().addClass("active");
+  $("input").focusout(function () {
+    if ($(this).val() == "") {
+      $(this).parent().removeClass("active");
+    } else {
+      $(this).parent().addClass("active");
+    }
+  });
 });
 // form end
 
-// side Nav 
+// side Nav
 function openNav() {
-    var side = document.getElementById("mySidenav");
-    if (side.style.width == "300px") {
-        side.style.width = "0px";
-    } else {
-        side.style.width = "300px";
-    }
+  var side = document.getElementById("mySidenav");
+  if (side.style.width == "300px") {
+    side.style.width = "0px";
+  } else {
+    side.style.width = "300px";
+  }
 }
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenav").style.width = "0";
 }
 
 // cursor
-let cursor = document.querySelector('.cursor');
-let cursorScale = document.querySelectorAll('a,button,.pop-up,.trigger,.share,#close,.toggle,#vimeo,#youtube,.link,.gallery');
+let cursor = document.querySelector(".cursor");
+let cursorScale = document.querySelectorAll(
+  "a,button,.pop-up,.trigger,.share,#close,.toggle,#vimeo,#youtube,.link,.gallery"
+);
 let mouseX = 0;
 let mouseY = 0;
 
 gsap.to({}, 0.016, {
-    repeat: -1,
-    onRepeat: function () {
-        gsap.set(cursor, {
-            css: {
-                left: mouseX,
-                top: mouseY,
-            }
-        })
-    }
+  repeat: -1,
+  onRepeat: function () {
+    gsap.set(cursor, {
+      css: {
+        left: mouseX,
+        top: mouseY,
+      },
+    });
+  },
 });
 
-window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-})
-cursorScale.forEach(link => {
-    link.addEventListener('mousemove', () => {
-        cursor.classList.add('grow');
-        if (link.classList.contains('small')) {
-            cursor.classList.remove('grow');
-            cursor.classList.add('grow-small');
-        }
-    });
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+cursorScale.forEach((link) => {
+  link.addEventListener("mousemove", () => {
+    cursor.classList.add("grow");
+    if (link.classList.contains("small")) {
+      cursor.classList.remove("grow");
+      cursor.classList.add("grow-small");
+    }
+  });
 
-    link.addEventListener('mouseleave', () => {
-        cursor.classList.remove('grow');
-        cursor.classList.remove('grow-small');
-    });
+  link.addEventListener("mouseleave", () => {
+    cursor.classList.remove("grow");
+    cursor.classList.remove("grow-small");
+  });
 });
 
 // Whole Page Scrolling Animation
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
 });
-const hiddenElements = document.querySelectorAll('.fade_up');
+const hiddenElements = document.querySelectorAll(".fade_up");
 hiddenElements.forEach((el) => observer.observe(el));
-
 
 // pop video
 $(document).ready(function () {
-    // Pop-up for first video
-    $('.popup-video').magnificPopup({
-        items: {
-            src: 'https://www.youtube.com/embed/tfnYNxdDnAs?si=Zbs0t09lwTfPG2xL'
-        },
-        type: 'iframe'
-    });
+  // Pop-up for first video
+  $(".popup-video").magnificPopup({
+    items: {
+      src: "https://www.youtube.com/embed/tfnYNxdDnAs?si=Zbs0t09lwTfPG2xL",
+    },
+    type: "iframe",
+  });
 
-    // Pop-up for other YouTube links
-    $('.link').magnificPopup({
-        type: 'iframe'
-    });
+  // Pop-up for other YouTube links
+  $(".link").magnificPopup({
+    type: "iframe",
+  });
 });
-
 
 // gallary code
 window.addEventListener("load", () => {
-    for (let i of document.querySelectorAll(".gallery img")) {
-        i.onclick = () => i.classList.toggle("full");
-    }
+  for (let i of document.querySelectorAll(".gallery img")) {
+    i.onclick = () => i.classList.toggle("full");
+  }
 });
 
 // skill bar function
 $(function () {
-    $('.circlechart').circlechart();
+  $(".circlechart").circlechart();
 });
+
+//YEAR COPYRIGHT AUTOCHANGE
+const year = new Date().getFullYear();
+document.getElementsByClassName(
+  "copyright"
+)[0].innerHTML = `© Rose ${year}. All rights reserved by`;
