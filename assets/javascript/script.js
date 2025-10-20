@@ -333,3 +333,79 @@ const year = new Date().getFullYear();
 document.getElementsByClassName(
   "copyright"
 )[0].innerHTML = `© Rose ${year}. All rights reserved by`;
+
+// gallery popup
+document.addEventListener('DOMContentLoaded', function () {
+    // Handle gallery item selection
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const popupGallery = document.querySelectorAll('.overlay_gallery');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function (event) {
+            const targetGallery = document.querySelector(item.getAttribute('href'));
+            if (targetGallery) {
+                // Hide all galleries
+                popupGallery.forEach(gallery => gallery.style.display = 'none');
+
+                // Show the selected gallery
+                targetGallery.style.display = 'block';
+            }
+        });
+    });
+
+    // Handle close button for popups
+    const closeButtons = document.querySelectorAll('.overlay_gallery .close');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const parentPopup = button.closest('.overlay_gallery');
+            if (parentPopup) {
+                parentPopup.style.display = 'none';
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Gallery filter buttons
+    const filterButtons = document.querySelectorAll('.gallery-filters .filter');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const filter = button.getAttribute('data-filter');
+
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Show/hide gallery items based on filter
+            galleryItems.forEach(item => {
+                const group = item.getAttribute('data-group');
+                if (filter === 'all' || filter === group) {
+                    item.style.display = 'block'; // Show matching items
+                } else {
+                    item.style.display = 'none'; // Hide non-matching items
+                }
+            });
+        });
+    });
+});
+
+function openOverlayProject() {
+    const overlay = document.querySelector('.overlay');
+    if (overlay) {
+        overlay.classList.add('is-on'); // Show the overlay
+    }
+}
+
+// Close overlay functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const closeButton = document.querySelector('#close');
+    const overlay = document.querySelector('.overlay');
+
+    if (closeButton && overlay) {
+        closeButton.addEventListener('click', function () {
+            overlay.classList.remove('is-on'); // Hide the overlay
+        });
+    }
+});
